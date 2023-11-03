@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hospital_connect/Provider/health_care_provider.dart';
 import 'package:provider/provider.dart';
 import 'Page/appoinment_schedule.dart';
-import 'Page/health_care.dart';
 import 'Page/dashboard.dart';
 import 'Page/detail_appointment.dart';
 import 'Page/detail_hospital.dart';
@@ -19,7 +18,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => FindHospitalProvider()),
         ChangeNotifierProvider(create: (_) => MakeAppointmentProvider()),
         ChangeNotifierProvider(create: (_) => DbManager()),
-        ChangeNotifierProvider(create: (_) => HealthCareProvider()),
+        // ChangeNotifierProvider(create: (_) => HealthCareProvider()),
       ],
       child: const MyApp(),
     ),
@@ -45,7 +44,7 @@ class MyApp extends StatelessWidget {
         '/makeAppoinment': (context) => const MakeAppointmentPage(),
         '/appointmentSchedule': (context) => const AppointmentSchedulePage(),
         '/detailAppointment': (context) => const DetailAppointmentPage(),
-        '/askMe': (context) => const AskMePage()
+        // '/askMe': (context) => const AskMePage()
       },
     );
   }
