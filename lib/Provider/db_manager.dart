@@ -24,11 +24,6 @@ class DbManager extends ChangeNotifier {
     _getAllAppointment();
   }
 
-  // void updateAppointment(DataAppointment dataAppointment) async{
-  //   await _databaseHelper.updateAppointment(dataAppointment);
-  //   _getAllAppointment();
-  // }
-
   void deleteAppointmentById(String id) async{
     await _databaseHelper.deleteAppointmentById(id);
     _getAllAppointment();

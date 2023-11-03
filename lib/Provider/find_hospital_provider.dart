@@ -10,10 +10,6 @@ class FindHospitalProvider extends ChangeNotifier {
   String _labelDdKota = 'Kota';
   String _provinceId = "";
   String _cityId = "";
-  String _hospitalId = "";
-  String _hospitalName = "";
-  String _hospitalAddress = "";
-  String _hospitalPhone = "";
   bool _isSelected = false;
 
   List<Provinsi> _daftarProvinsi = [];
@@ -24,10 +20,6 @@ class FindHospitalProvider extends ChangeNotifier {
   String get labelDdKota => _labelDdKota;
   String get provinceId => _provinceId;
   String get cityId => _cityId;
-  String get hospitalId => _hospitalId;
-  String get hospitalName => _hospitalName;
-  String get hospitalAddress => _hospitalAddress;
-  String get hospitalPhone => _hospitalPhone;
   bool get isSelected => _isSelected;
 
   List<Provinsi> get daftarProvinsi => _daftarProvinsi;
@@ -92,16 +84,6 @@ class FindHospitalProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  set hospitalId(String id) {
-    _hospitalId = id;
-    notifyListeners();
-  }
-
-  set hospitalPhone(String phone) {
-    _hospitalPhone = phone;
-    notifyListeners();
-  }
-
   set labelDdProvinsi(String labelDdProvinsi) {
     _labelDdProvinsi = labelDdProvinsi;
     notifyListeners();
@@ -109,16 +91,6 @@ class FindHospitalProvider extends ChangeNotifier {
 
   set labelDdKota(String labelDdKota) {
     _labelDdKota = labelDdKota;
-    notifyListeners();
-  }
-
-  set hospitalName(String hospitalName) {
-    _hospitalName = hospitalName;
-    notifyListeners();
-  }
-
-  set hospitalAddress(String hospitalAddress) {
-    _hospitalAddress = hospitalAddress;
     notifyListeners();
   }
 

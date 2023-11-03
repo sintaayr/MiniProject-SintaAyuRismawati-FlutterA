@@ -57,6 +57,7 @@ class _DashboardPageState extends State<DashboardPage> {
           ),
           const SizedBox(height: 10),
           CardMenuWidget(
+              key: const Key("appointmentSchedule"),
               onTap: () {
                 Navigator.of(context).pushNamed('/appointmentSchedule');
               },
@@ -71,8 +72,7 @@ class _DashboardPageState extends State<DashboardPage> {
           BottomNavigationBarItem(
               icon: Icon(Icons.question_answer), label: 'Healt Care')
         ],
-        selectedItemColor: const Color.fromARGB(
-            255, 207, 38, 38), // Menetapkan warna ikon yang dipilih
+        selectedItemColor: const Color.fromARGB(255, 207, 38, 38),
         unselectedItemColor: const Color.fromARGB(255, 207, 38, 38),
         onTap: (int index) {
           if (index == 0) {

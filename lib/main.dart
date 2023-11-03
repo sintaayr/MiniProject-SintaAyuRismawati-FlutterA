@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hospital_connect/Page/health_care.dart';
 import 'package:hospital_connect/Provider/health_care_provider.dart';
 import 'package:provider/provider.dart';
 import 'Page/appoinment_schedule.dart';
@@ -6,7 +7,6 @@ import 'Page/dashboard.dart';
 import 'Page/detail_appointment.dart';
 import 'Page/detail_hospital.dart';
 import 'Page/find_hospital.dart';
-import 'Page/health_care.dart';
 import 'Page/make_appoinment.dart';
 import 'Provider/db_manager.dart';
 import 'Provider/find_hospital_provider.dart';
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/makeAppoinment': (context) => const MakeAppointmentPage(),
         '/appointmentSchedule': (context) => const AppointmentSchedulePage(),
         '/detailAppointment': (context) => const DetailAppointmentPage(),
-        '/askMe': (context) => const AskMePage()
+        '/askMe': (context) => const HealthCarePage()
       },
     );
   }

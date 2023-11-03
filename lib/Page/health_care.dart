@@ -3,14 +3,14 @@ import 'package:provider/provider.dart';
 import '../Model/chat_message.dart';
 import '../Provider/health_care_provider.dart';
 
-class AskMePage extends StatefulWidget {
-  const AskMePage({super.key});
+class HealthCarePage extends StatefulWidget {
+  const HealthCarePage({super.key});
 
   @override
-  State<AskMePage> createState() => _AskMePageState();
+  State<HealthCarePage> createState() => _HealthCarePageState();
 }
 
-class _AskMePageState extends State<AskMePage> {
+class _HealthCarePageState extends State<HealthCarePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,9 +31,9 @@ class _AskMePageState extends State<AskMePage> {
                 itemCount: healthCare.chatMessages.length,
                 shrinkWrap: true,
                 padding: const EdgeInsets.only(top: 10, bottom: 60),
-                // physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  final messageType = healthCare.chatMessages[index].messageType;
+                  final messageType =
+                      healthCare.chatMessages[index].messageType;
                   return Column(
                     children: [
                       Container(
@@ -52,7 +52,8 @@ class _AskMePageState extends State<AskMePage> {
                                       : const Color.fromARGB(
                                           255, 122, 186, 238))),
                               child: Text(
-                                healthCare.chatMessages[index].messageContent ?? "",
+                                healthCare.chatMessages[index].messageContent ??
+                                    "",
                                 textAlign: TextAlign.justify,
                               )),
                         ),
@@ -89,10 +90,12 @@ class _AskMePageState extends State<AskMePage> {
                       ),
                       FloatingActionButton(
                         onPressed: () async {
-                          healthCare.question = healthCare.messageController.text;
+                          healthCare.question =
+                              healthCare.messageController.text;
                           healthCare.addMessage(
                             ChatMessage(
-                                messageContent: healthCare.messageController.text,
+                                messageContent:
+                                    healthCare.messageController.text,
                                 messageType: 'sender'),
                           );
                           try {

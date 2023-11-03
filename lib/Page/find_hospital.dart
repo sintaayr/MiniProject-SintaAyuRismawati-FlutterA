@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../Provider/find_hospital_provider.dart';
 import '../Widget/find_hospital/row_dropdown.dart';
 
@@ -20,8 +19,6 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
 
   @override
   Widget build(BuildContext context) {
-    // final findHospitalProvider = Provider.of<FindHospitalProvider>(context);
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -68,7 +65,6 @@ class _FindHospitalPageState extends State<FindHospitalPage> {
                               trailing: IconButton(
                                 icon: const Icon(Icons.open_in_new),
                                 onPressed: () {
-                                  // hospital.hospitalPhone = hospital.phone ?? "";
                                   Navigator.of(context).pushNamed(
                                       '/detailHospital',
                                       arguments: index);

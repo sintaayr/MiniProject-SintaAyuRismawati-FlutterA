@@ -25,7 +25,7 @@ class _AppointmentSchedulePageState extends State<AppointmentSchedulePage> {
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Consumer<DbManager>(
-            builder: (BuildContext context, db, Widget? child) {
+            builder: (context, db, Widget? child) {
               if (db.dataAppointment.isNotEmpty) {
                 return ListView.builder(
                   shrinkWrap: true,
