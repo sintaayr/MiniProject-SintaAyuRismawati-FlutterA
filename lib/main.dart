@@ -19,7 +19,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => FindHospitalProvider()),
         ChangeNotifierProvider(create: (_) => MakeAppointmentProvider()),
         ChangeNotifierProvider(create: (_) => DbManager()),
-        ChangeNotifierProvider(create: (_) => HealthCareProvider()),
+        // ChangeNotifierProvider(create: (_) => HealthCareProvider()),
       ],
       child: const MyApp(),
     ),
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/makeAppoinment': (context) => const MakeAppointmentPage(),
         '/appointmentSchedule': (context) => const AppointmentSchedulePage(),
         '/detailAppointment': (context) => const DetailAppointmentPage(),
-        '/askMe': (context) => const AskMePage()
+        // '/askMe': (context) => const AskMePage()
       },
     );
   }
