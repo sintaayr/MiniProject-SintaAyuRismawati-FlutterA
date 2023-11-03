@@ -6,6 +6,7 @@ import 'Page/dashboard.dart';
 import 'Page/detail_appointment.dart';
 import 'Page/detail_hospital.dart';
 import 'Page/find_hospital.dart';
+import 'Page/health_care.dart';
 import 'Page/make_appoinment.dart';
 import 'Provider/db_manager.dart';
 import 'Provider/find_hospital_provider.dart';
@@ -18,7 +19,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => FindHospitalProvider()),
         ChangeNotifierProvider(create: (_) => MakeAppointmentProvider()),
         ChangeNotifierProvider(create: (_) => DbManager()),
-        // ChangeNotifierProvider(create: (_) => HealthCareProvider()),
+        ChangeNotifierProvider(create: (_) => HealthCareProvider()),
       ],
       child: const MyApp(),
     ),
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/makeAppoinment': (context) => const MakeAppointmentPage(),
         '/appointmentSchedule': (context) => const AppointmentSchedulePage(),
         '/detailAppointment': (context) => const DetailAppointmentPage(),
-        // '/askMe': (context) => const AskMePage()
+        '/askMe': (context) => const AskMePage()
       },
     );
   }
