@@ -1,6 +1,5 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-
 import '../Model/data_apoinment.dart';
 
 class DatabaseHelper {
@@ -54,16 +53,6 @@ class DatabaseHelper {
     List<Map<String, dynamic>> results = await db.query(tablename);
     return results.map((e) => DataAppointment.fromMap(e)).toList();
   }
-
-  // Future<void> updateAppointment(DataAppointment dataAppointment) async {
-  //   final db = await database;
-  //   await db.update(
-  //     tablename,
-  //     dataAppointment.toMap(),
-  //     where: 'id = ?',
-  //     whereArgs: [dataAppointment.id],
-  //   );
-  // }
 
   Future<void> deleteAppointmentById(String id) async {
     final db = await database;

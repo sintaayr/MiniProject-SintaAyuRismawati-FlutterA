@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/makeAppoinment': (context) => const MakeAppointmentPage(),
         '/appointmentSchedule': (context) => const AppointmentSchedulePage(),
         '/detailAppointment': (context) => const DetailAppointmentPage(),
-        '/askMe': (context) => const HealthCarePage()
+        '/healthCare': (context) => const HealthCarePage()
       },
     );
   }

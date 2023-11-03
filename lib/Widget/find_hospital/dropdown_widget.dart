@@ -22,9 +22,9 @@ class DropdownWidget extends StatelessWidget {
       child: Center(
         child: DropdownButton<String>(
           hint: Text(label),
-          isDense: true, // Mengurangi padding dalam DropdownButton
-          isExpanded: true, // Membuat dropdown mengisi lebar container
-          underline: Container(), // Menghilangkan garis bawah
+          isDense: true, 
+          isExpanded: true, 
+          underline: Container(),
           items: items,
           onChanged: onChanged,
         ),

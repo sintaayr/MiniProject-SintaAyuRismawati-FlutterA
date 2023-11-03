@@ -11,6 +11,7 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
+    // int selectedIndex = 0;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 207, 38, 38),
@@ -67,6 +68,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        // currentIndex: selectedIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
           BottomNavigationBarItem(
@@ -78,7 +80,7 @@ class _DashboardPageState extends State<DashboardPage> {
           if (index == 0) {
             Navigator.pushReplacementNamed(context, '/');
           } else if (index == 1) {
-            Navigator.pushNamed(context, '/askMe');
+            Navigator.pushNamed(context, '/healthCare');
           }
         },
       ),

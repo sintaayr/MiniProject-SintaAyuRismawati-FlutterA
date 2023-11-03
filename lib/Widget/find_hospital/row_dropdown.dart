@@ -27,7 +27,6 @@ class _RowDropDownWidgetState extends State<RowDropDownWidget> {
                     hospital.labelDdProvinsi = provinsi.name ?? "";
                     hospital.provinceId = provinsi.id;
                     hospital.getKota();
-                    hospital.isSelected = true;
                   },
                   value: provinsi.name,
                   child: Text(provinsi.name ?? ''),
@@ -48,6 +47,7 @@ class _RowDropDownWidgetState extends State<RowDropDownWidget> {
                       hospital.labelDdKota = kota.name ?? '';
                       hospital.cityId = kota.id;
                       hospital.getHospital();
+                      hospital.isSelected = true;
                     },
                     value: kota.name,
                     child: Text(kota.name ?? ''),
